@@ -2,12 +2,12 @@ SCM_WRAPPER
 ===========
 
 SCM_WRAPPER is an attempt of high level SCM wrappers with a unified interface.
-Maybe it already exists somewhere, but I haven't seen one before, so... Each
+Maybe it already exists somewhere, but I haven't seen one before: each
 project dealing with multiple SCMs I have seen use their own interfaces and
 most of time use ugly exec calls instead of existings (but really doc-babelized)
 ruby bindings, so... time to try to be efficient.
 
-This librairy is extracted from the 'snitcher' rails project. Hoping that could
-help at list a guy on Earth.
+This library is extracted from the 'snitcher' rails project. Hoping that could
+help at least a guy on Earth.
 
 Oh! BTW: instead of killing people, just make love. Thank you.
