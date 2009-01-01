@@ -1,4 +1,5 @@
 require 'lib/scm_wrapper/scm_wrapper'
+require 'lib/scm_wrapper/scm_log'
 
 require 'svn/core'
 require 'svn/client'
@@ -15,12 +16,7 @@ module ScmWrapper
       logs = []
       ctx = Svn::Client::Context.new()
       ctx.log(self.url, start_rev, end_rev, 0, nil, true) do |changed_paths, rev, author, date, message|
-        s = OpenStruct.new()
-        s.message = message
-        s.author = author
-        s.changed_paths = changed_paths
-        s.date = date
-        s.rev = rev
+        s = ScmLog.new(changed_paths, rev, author, date, message)
         logs << s
       end
       logs
